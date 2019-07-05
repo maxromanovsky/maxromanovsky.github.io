@@ -1,5 +1,5 @@
-#title: Maksim Ramanouski personal page
 theme: minima
+markdown: CommonMarkGhPages
 title: Maksim Ramanouski
 author: Maksim Ramanouski
 description: >
@@ -24,6 +24,10 @@ minima:
   # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%-d %b %Y"
 
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
 twitter_username: maxromanovsky
 github_username: maxromanovsky
 facebook_username: max.romanovsky
@@ -36,3 +40,5 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-relative-links
+  - jemoji

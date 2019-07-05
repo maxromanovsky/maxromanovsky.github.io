@@ -3,4 +3,6 @@ layout: home
 comments: false
 title: Home
 ---
-Just a homepage. Look at blog posts though :)
+Hi there, my name is Max. Or Maksim, as you wish. 
+
+It's just a homepage. I'm too lazy to fill it with my personal info. Look at my blog posts though :point_down:

@@ -1,6 +1,8 @@
 ---
 layout: page
-title: About me & CV
+title: About me
 comments: false
 ---
-LinkedIn has my most up-to-date CV. Social media (such as Instagram or Facebook) have my personal info.
+[LinkedIn](https://www.linkedin.com/in/maxromanovsky/) has my most up-to-date CV.
+
+Social media (such as [Instagram](https://www.instagram.com/maxromanovsky/) or [Facebook](https://www.facebook.com/max.romanovsky)) have my personal info.
