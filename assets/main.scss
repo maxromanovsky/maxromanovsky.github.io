@@ -2,7 +2,9 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "{{ site.theme }}";
+@import "minima";
+
+$spacing-unit:     30px !default;
 
 .footer-col-1 {
   width: -webkit-calc(25% - (#{$spacing-unit} / 2));
@@ -18,3 +20,4 @@
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
   width:         calc(45% - (#{$spacing-unit} / 2));
 }
+
