@@ -1,16 +1,11 @@
 # Github Pages
 
 ## Todo
-- css issue
 - https://jekyllrb.com/docs/posts/
-- Responsive & images
-- cookie warning
-- social links not showing up
-- syntax highlight: https://help.github.com/en/articles/page-build-failed-config-file-error#fixing-highlighting-errors
+- https://github.com/topics/jekyll-plugin?o=desc&s=stars
 - sitemap http://0.0.0.0:4000/sitemap.xml
 - rss feed http://0.0.0.0:4000/feed.xml
 - index in google
-- improve footer
 
 ### Later
 - https://jekyllrb.com/docs/pagination/
@@ -26,6 +21,6 @@ docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pag
 ## Dependencies
 
 - https://github.com/github/pages-gem
-- https://github.com/jekyll/minima
+- https://github.com/jekyll/minima/blob/v2.5.0/README.md
 - https://cookieconsent.osano.com/download/
 - https://help.github.com/en/categories/customizing-github-pages

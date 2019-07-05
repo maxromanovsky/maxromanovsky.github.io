@@ -3,7 +3,10 @@ theme: minima
 title: Maksim Ramanouski
 author: Maksim Ramanouski
 description: >
-  My homepage. Occasional blogging, basic info.
+  My homepage. Maksim Ramanouski aka maxromanovsky.
+  Occasional blogging, basic info.
+  Solutions Architect, metal lover, nerd, traveler, casual photographer, binge-watcher, newbie gamer.
+
 
 show_excerpts: true
 excerpt_separator: <!--more-->
@@ -21,14 +24,13 @@ minima:
   # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%-d %b %Y"
 
-  social_links:
-    twitter: maxromanovsky
-    github: maxromanovsky
-    facebook: max.romanovsky
-    instagram: maxromanovsky
-    linkedin: maxromanovsky
-    telegram: maxromanovsky
-    rss: rss
+twitter_username: maxromanovsky
+github_username: maxromanovsky
+facebook_username: max.romanovsky
+instagram_username: maxromanovsky
+linkedin_username: maxromanovsky
+telegram_username: maxromanovsky
+rss: rss
 
 plugins:
   - jekyll-feed
