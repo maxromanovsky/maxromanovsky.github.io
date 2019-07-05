@@ -2,12 +2,14 @@
 theme: minima
 title: Maksim Ramanouski
 author: Maksim Ramanouski
-email: max.romanovsky@gmail.com
 description: >
   My homepage. Occasional blogging, basic info.
 
 show_excerpts: true
+excerpt_separator: <!--more-->
 permalink: /blog/:year-:month-:day-:title.html
+highlighter: rouge
+
 header_pages:
   - index.md
   - about.md
