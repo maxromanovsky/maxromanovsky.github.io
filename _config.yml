@@ -1,0 +1,34 @@
+#title: Maksim Ramanouski personal page
+theme: minima
+title: Maksim Ramanouski
+author: Maksim Ramanouski
+email: max.romanovsky@gmail.com
+description: >
+  My homepage. Occasional blogging, basic info.
+
+show_excerpts: true
+permalink: /blog/:year-:month-:day-:title.html
+header_pages:
+  - index.md
+  - about.md
+disqus:
+  shortname: maxromanovsky
+google_analytics: UA-143359647-1
+
+minima:
+  # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+  date_format: "%-d %b %Y"
+
+  social_links:
+    twitter: maxromanovsky
+    github: maxromanovsky
+    facebook: max.romanovsky
+    instagram: maxromanovsky
+    linkedin: maxromanovsky
+    telegram: maxromanovsky
+    rss: rss
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
