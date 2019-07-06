@@ -1,15 +1,11 @@
 # Github Pages
 
 ## Todo
-- sitemap http://0.0.0.0:4000/sitemap.xml
-- rss feed http://0.0.0.0:4000/feed.xml
-- index in google
-- https://github.com/benbalter/jekyll-relative-links
-- https://github.com/jekyll/jekyll-gist
-- https://github.com/github/jekyll-commonmark-ghpages
 
 ### Later
+- https://github.com/benbalter/jekyll-relative-links
 - https://jekyllrb.com/docs/pagination/
+- https://github.com/jekyll/jekyll-gist
 
 ## Run locally
 
@@ -37,4 +33,6 @@ docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pag
 
 ### Markup
 - https://github.github.com/gfm/
+- https://guides.github.com/features/mastering-markdown/
 - https://www.webfx.com/tools/emoji-cheat-sheet/
+- https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
