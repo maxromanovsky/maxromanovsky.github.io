@@ -1,0 +1,19 @@
+{%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+<p>
+  {%- for tag in tags -%}
+  <a href="#{{ tag[0] | slugify }}" class="post-{{ tag_class }}">{{ tag[0] }}</a>
+  {%- endfor -%}
+</p>
+<div class="tag-section">
+  {% for tag in tags %}
+  <h1 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h1>
+  <ul class="post-list">
+    {% for post in tag[1] %}
+      {%- include post_listing.html -%}
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>

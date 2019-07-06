@@ -2,6 +2,8 @@
 layout: home
 comments: false
 title: Home
+list_title: Recent posts
+list_limit: 5
 ---
 Hi there, my name is Max. Or Maksim, as you wish. 
 

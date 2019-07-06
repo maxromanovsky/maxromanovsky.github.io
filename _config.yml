@@ -10,11 +10,12 @@ description: >
 
 show_excerpts: true
 excerpt_separator: <!--more-->
-permalink: /blog/:year-:month-:day-:title.html
+permalink: /blog/:categories/:year-:month-:day-:title.html
 highlighter: rouge
 
 header_pages:
   - index.md
+  - blog.md
   - about.md
 disqus:
   shortname: maxromanovsky

@@ -5,6 +5,7 @@
 @import "minima";
 
 $spacing-unit:     30px !default;
+$font-font-awesome: FontAwesome;
 
 .footer-col-1 {
   width: -webkit-calc(25% - (#{$spacing-unit} / 2));
@@ -21,3 +22,92 @@ $spacing-unit:     30px !default;
   width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
+//Tag styling from https://github.com/codinfox/codinfox-lanyon/blob/dev/_scss/component/_tag.scss
+%post-token {
+  display: inline-block;
+  padding: 0 .5rem;
+  margin-right: .5rem;
+  margin-bottom: .3rem;
+  border-radius: 4px;
+  color: $brand-color;
+  font-family: $base-font-family;
+  font-size: 90%;
+  &:before {
+    font-family: $font-font-awesome;
+    padding-right: .5em;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff !important;
+  }
+  &:visited {
+    color: $brand-color;
+  }
+}
+
+.post-tag {
+  @extend %post-token;
+  background: rgba($brand-color, 0.15);
+  &:before {
+    content: "\f02b";
+  }
+  &:hover {
+    background: $brand-color;
+  }
+}
+
+.post-category {
+  @extend %post-token;
+  background: rgba($grey-color-dark, 0.15);
+  &:before {
+    content: "\f03a";
+  }
+  &:hover {
+    background: $grey-color-dark;
+  }
+}
+
+//.post-tag {
+//  @extend %post-token;
+//  display: inline-block;
+//  background: rgba($brand-color, 0.15);
+//  padding: 0 .5rem;
+//  margin-right: .5rem;
+//  margin-bottom: .3rem;
+//  border-radius: 4px;
+//  color: $brand-color;
+//  font-family: $base-font-family;
+//  font-size: 90%;
+//  &:before {
+//    content: "\f02b";
+//    font-family: $font-font-awesome;
+//    padding-right: .5em;
+//  }
+//  &:hover {
+//    text-decoration: none;
+//    background: $brand-color;
+//    color: #fff;
+//  }
+//}
+
+//.post-category {
+//  display: inline-block;
+//  background: rgba($grey-color-dark, 0.15);
+//  padding: 0 .5rem;
+//  margin-right: .5rem;
+//  margin-bottom: .3rem;
+//  border-radius: 4px;
+//  color: $brand-color;
+//  font-family: $base-font-family;
+//  font-size: 90%;
+//  &:before {
+//    content: "\f03a";
+//    font-family: $font-font-awesome;
+//    padding-right: .5em;
+//  }
+//  &:hover {
+//    text-decoration: none;
+//    background: $grey-color-dark;
+//    color: #fff;
+//  }
+//}
