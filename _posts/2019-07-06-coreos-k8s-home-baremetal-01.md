@@ -8,9 +8,9 @@ tags: [coreos, kubernetes, kubespray, nuc, udoo]
 ---
 I always wanted to run a small Kubernetes cluster at home.
 
-Why not in cloud? Kubernetes in cloud is still expensive if it's just for fun. And I have some mini computer at home, as well as desire to look how kubernetes works on the network layer.
+Why not in cloud? Kubernetes in cloud is still expensive if it's just for fun. And I have a couple mini computers at home, as well as desire to look how Kubernetes works on the network layer.
 
-I was never satisfied with "fat" Linux distributions for running containers, and didn't want to configure `unattended-upgrades`. Trying out CoreOS Container Linux sounded like a natural fit for my little pet.
+I was never satisfied with "fat" Linux distributions for running containers, and didn't want to configure OS auto upgrades. Trying out CoreOS Container Linux sounded like a natural fit for my little pets.
 
 <!--more-->
 
@@ -46,9 +46,9 @@ Another one responds to Udoo, and it's breed is Udoo x86 (first version from [Ki
 
 Image from [Kickstarter](https://www.kickstarter.com/projects/udoo/udoo-x86-the-most-powerful-maker-board-ever)
 
-Mine version is called UDOO X86 Advanced, and it has 4-core Celeron [N3160](https://ark.intel.com/content/www/us/en/ark/products/91831/intel-celeron-processor-n3160-2m-cache-up-to-2-24-ghz.html), as well as 4Gb of RAM, but rather small 8Gb eMMC.
+My edition is called UDOO X86 Advanced, and it has 4-core Celeron [N3160](https://ark.intel.com/content/www/us/en/ark/products/91831/intel-celeron-processor-n3160-2m-cache-up-to-2-24-ghz.html), as well as 4Gb of RAM, but rather small 8Gb eMMC.
 
-Both processors are [quite similar](https://ark.intel.com/content/www/us/en/ark/compare.html?productIds=91831,87261) in their performance, but Nuc has twice more memory, and large (but slower) HDD.
+Both processors are [quite similar](https://ark.intel.com/content/www/us/en/ark/compare.html?productIds=91831,87261) in their performance, but Nuc has twice the memory and larger (but slower) HDD.
 
 # CoreOS installation
 
@@ -57,9 +57,8 @@ Both pets have Ethernet port, and I prefer stable wired connection with DHCP add
 I've used two USB drives:
 - One with the [latest stable CoreOS ISO](https://coreos.com/os/docs/latest/booting-with-iso.html) flashed by [Balena Etcher](https://www.balena.io/etcher/). This ISO would be used to boot the CoreOS and run `coreos-install`.
 - Another with couple of goodies:
-    - [Latest stable](https://stable.release.core-os.net/amd64-usr/current/coreos_production_image.bin.bz2) `coreos_production_image.bin.bz2` (not to be confused with the ISO). That would be actually an image that would be installed to the machine.
+    - [Latest stable](https://stable.release.core-os.net/amd64-usr/current/coreos_production_image.bin.bz2) `coreos_production_image.bin.bz2` (not to be confused with the ISO). That would be actually an image that is installed on the machine.
     - `ignition.json`, a CoreOS config file consumable by `coreos-install`.
-    -  binary, that would turn `yaml` config to less-readable `json` used by `coreos-install` to configure OS installation.
 
 Here's the process I've followed to install the OS:
 - Generate a hash from the password:
@@ -71,4 +70,31 @@ Here's the process I've followed to install the OS:
     - CoreOS autoupdate strategy
 - I store my `ignition.yaml` in the repo (without password hash and pubkey) as a reference, but CoreOS installer uses another config format, which is a less-readable `json`. Latest [Config Transpiler](https://github.com/coreos/container-linux-config-transpiler/releases) should be downloaded to create the JSON config: `ct < ignition.yaml > ignition.json`. There's even a [validation service](https://coreos.com/validate/) to check that config is well-formed. 
 - Resulting config is written to a USB drive (different from the one where bootable ISO is flashed), alongside with the `bin.bz2` image.
+- After computer is booted from the CoreOS ISO run the installation command: `coreos-install -d /dev/target-disk -i /path/to/ignition.json -f /path/to/image.bin.bz2`, where:
+    - `target-disk` is the disk where CoreOS should be installed (disk, not a partition). CoreOS will erase the entire disk and create a [new partition table](https://coreos.com/os/docs/latest/sdk-disk-partitions.html).
+    - `/path/to` is path to the second USB drive (previously needs to be `mount`'ed), containing both the image & ignition config.
 
+Here's my `ignition.yaml` config:
+
+```yaml
+# Replace <PWD_HASH> with the password hash (or remove line if it's not necessary)
+# Replace <SSH_PUBKEY> with the SSH public key. Add as many as you wish
+# Download Config Transpiler: https://github.com/coreos/container-linux-config-transpiler/releases/latest
+# Run ct < ignition.yaml > ignition.json to generate the resulting config
+passwd:
+  users:
+    - name: core
+      # https://coreos.com/os/docs/latest/clc-examples.html#generating-a-password-hash
+      # mkpasswd --method=SHA-512 --rounds=4096
+      password_hash: "<PWD_HASH>"
+      ssh_authorized_keys:
+        - <SSH_PUBKEY>
+update:
+  group: stable
+locksmith:
+  reboot_strategy: reboot
+```
+
+If you're lucky, then CoreOS would be installed on your machine. You can login either with the password, or an SSH key. It doesn't have much services installed, and there isn't any package manager to install more. The idea is to spin up containers to do the work.
+
+And the next step would be Kubernetes installation to run containers at scale.
