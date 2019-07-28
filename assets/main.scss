@@ -8,8 +8,8 @@ $spacing-unit:     30px !default;
 $font-font-awesome: FontAwesome;
 
 .footer-col-1 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+  width:         calc(60% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
@@ -17,9 +17,20 @@ $font-font-awesome: FontAwesome;
   width:         calc(40% - (#{$spacing-unit} / 2));
 }
 
-.footer-col-3 {
-  width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-  width:         calc(40% - (#{$spacing-unit} / 2));
+ul.cert {
+  list-style: none;
+
+  li {
+    display: inline;
+
+    img {
+      height: 200px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 //Tag styling from https://github.com/codinfox/codinfox-lanyon/blob/dev/_scss/component/_tag.scss
@@ -66,48 +77,3 @@ $font-font-awesome: FontAwesome;
     background: $grey-color-dark;
   }
 }
-
-//.post-tag {
-//  @extend %post-token;
-//  display: inline-block;
-//  background: rgba($brand-color, 0.15);
-//  padding: 0 .5rem;
-//  margin-right: .5rem;
-//  margin-bottom: .3rem;
-//  border-radius: 4px;
-//  color: $brand-color;
-//  font-family: $base-font-family;
-//  font-size: 90%;
-//  &:before {
-//    content: "\f02b";
-//    font-family: $font-font-awesome;
-//    padding-right: .5em;
-//  }
-//  &:hover {
-//    text-decoration: none;
-//    background: $brand-color;
-//    color: #fff;
-//  }
-//}
-
-//.post-category {
-//  display: inline-block;
-//  background: rgba($grey-color-dark, 0.15);
-//  padding: 0 .5rem;
-//  margin-right: .5rem;
-//  margin-bottom: .3rem;
-//  border-radius: 4px;
-//  color: $brand-color;
-//  font-family: $base-font-family;
-//  font-size: 90%;
-//  &:before {
-//    content: "\f03a";
-//    font-family: $font-font-awesome;
-//    padding-right: .5em;
-//  }
-//  &:hover {
-//    text-decoration: none;
-//    background: $grey-color-dark;
-//    color: #fff;
-//  }
-//}
