@@ -55,3 +55,12 @@ certificates:
   - name: Google Cloud Professional Data Engineer
     image: https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11667075
     url: https://www.credential.net/ctd7pqmw
+  - name: Architecting with Google Kubernetes Engine
+    image: /assets/images/cert/Y7AZ49H3L64L.png
+    url: https://www.coursera.org/account/accomplishments/specialization/Y7AZ49H3L64L
+  - name: Developing Applications with Google Cloud Platform
+    image: /assets/images/cert/BEHZFAJFDN3L.png
+    url: https://www.coursera.org/account/accomplishments/specialization/BEHZFAJFDN3L
+  - name: Machine Learning with TensorFlow on Google Cloud Platform
+    image: /assets/images/cert/QZM43XMQUR9H.png
+    url: https://www.coursera.org/account/accomplishments/specialization/QZM43XMQUR9H
