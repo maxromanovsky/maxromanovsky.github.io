@@ -23,7 +23,7 @@ I've used [v2.10.4](https://github.com/kubernetes-sigs/kubespray/releases/tag/v2
 [CoreOS](https://kubespray.io/#/docs/coreos) is supported, and main `cluster.yml` playbook even auto-detects CoreOS and sets proper defaults, however other playbooks (such as `reset.yml`) don't support them. Following changes worked for me, when I've configured, and then tore down the cluster multiple times.
 
 ## Configuration
-
+{% raw %}
 ```diff
 diff --git a/k8s/inventory-x64/group_vars/all/all.yml b/k8s/inventory-x64/group_vars/all/all.yml
 index 4b45b66..d16c4c2 100644
@@ -84,6 +84,7 @@ index b2bfdf0..dcd9fcc 100644
  # Download kubectl onto the host that runs Ansible in {{ bin_dir }}
  # kubectl_localhost: false
 ```
+{% endraw %}
 
 Couple notes about those changes:
 
@@ -93,6 +94,7 @@ Couple notes about those changes:
 
 My inventory file is pretty straightforward. My cluster doesn't have HA for K8s master and etcd, as it has just 2 nodes.
 
+{% raw %}
 ```ini
 nuc ansible_host=192.168.0.10 ansible_user=core etcd_member_name=nuc5ppyh
 udoo ansible_host=192.168.0.11 ansible_user=core
@@ -111,14 +113,17 @@ kube-master
 kube-node
 
 ```
+{% endraw %}
 
 ## Cluster provisioning
 
 Provisioning requires just a single command, but prepare for a long process :clock1:
 
+{% raw %}
 ```bash
 ansible-playbook -i inventory-x64/inventory.ini kubespray-x64/cluster.yml -b -v > install.log
 ```
+{% endraw %}
 
 `-b` stands for `become`, which means `sudo` to CoreOS nodes in our case, while `-v` produces a verbose output to the `install.log` file. If cluster provisioning fails, look at the last lines of this log file.
 
@@ -126,6 +131,7 @@ Once provisioning is completed, copy `artifacts/admin.conf` to `~/.kube/config` 
 
 Now (hopefully) you have a running cluster, and you can verify it by invoking some kubectl commands:
 
+{% raw %}
 ```bash
 $ kubectl version
 Client Version: version.Info{Major:"1", Minor:"15", GitVersion:"v1.15.1", GitCommit:"4485c6f18cee9a5d3c3b4e523bd27972b1b53892", GitTreeState:"clean", BuildDate:"2019-07-18T14:25:20Z", GoVersion:"go1.12.7", Compiler:"gc", Platform:"darwin/amd64"}
@@ -184,7 +190,7 @@ kube-system   replicaset.apps/coredns-56bc6b976d                   2         2  
 kube-system   replicaset.apps/dns-autoscaler-5fc5fdbf6             1         1         1       28d
 kube-system   replicaset.apps/kubernetes-dashboard-6c7466966c      1         1         1       28d
 ```
-
+{% endraw %}
 
 Long story short, it's Kubernetes v1.14.3 with the following components:
 - Calico for pod networking
