@@ -12,11 +12,9 @@ Now it's time to finally install Kubernetes on them!
 
 <!--more-->
 
-On a side note, Fedora released [the first preview](https://fedoramagazine.org/introducing-fedora-coreos/) of Fedora CoreOS, which is going to replace OSS [CoreOS Container Linux](https://unix.stackexchange.com/a/491237), a.k.a. CoreOS. However, I've decided to stick with CoreOS Container Linux, as I want to have at least one stable component in my system :smile:.
-
 [Kubespray](https://github.com/kubernetes-sigs/kubespray/) is an official tool for deploying a Production-Ready Kubernetes cluster on wide variety of infrastructure, including bare metal. It is based on Ansible, and uses kubeadm under the hood (if I'm not mistaken).
 
-I've used [v2.10.4](https://github.com/kubernetes-sigs/kubespray/releases/tag/v2.10.4), which was latest at the moment. Personally, I configured it as a submodule to my git repo with custom configs, but it could be just downloaded from a tag, and used independently of git.
+I've used [v2.10.4](https://github.com/kubernetes-sigs/kubespray/releases/tag/v2.10.4), which was latest as of time I've written this post. Personally, I configured it as a submodule to my git repo with custom configs, but it could be just downloaded from a tag, and used independently of git.
 
 [Quickstart](https://kubespray.io/#/?id=usage) usage commands are available on it's website, and I won't repeat them. However, I'd like to emphasize that you should use an Ansible from kubespray's `requirements.txt` instead of latest & greatest from your package manager. It turns out, that Ansible sometimes breaks backward compatibility or introduces bugs, which break kubespray. It happend to me twice (in 2018 and in 2019), and both times Ansible pinned to Kubespray worked like a charm.
 

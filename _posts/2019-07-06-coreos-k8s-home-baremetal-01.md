@@ -12,6 +12,8 @@ Why not in cloud? Kubernetes in cloud is still expensive if it's just for fun. A
 
 I was never satisfied with "fat" Linux distributions for running containers, and didn't want to configure OS auto upgrades. Trying out CoreOS Container Linux sounded like a natural fit for my little pets.
 
+**Upd 2020-04-23**: I have migrated to [Flatcar Container Linux](https://www.flatcar-linux.org/), which is more or less a drop-in replacement for CoreOS Container Linux
+
 <!--more-->
 
 Anyway, I've decided to start with this:
