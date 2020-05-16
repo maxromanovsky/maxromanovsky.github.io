@@ -55,11 +55,11 @@ certificates:
   - name: AWS Certified Solutions Architect - Associate
 #    image: https://www.certmetrics.com/api/ob/image/amazon/c/1
     image: /assets/images/cert/aws_saa.png
-    url: https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2019-09-24&ci=AWS00823181
+    url: https://www.youracclaim.com/badges/b8e69c3e-897d-46a1-88e7-eed6d0caa0e1
   - name: AWS Certified Cloud Practitioner
 #    image: https://www.certmetrics.com/api/ob/image/amazon/c/9
     image:  /assets/images/cert/aws_cp.png
-    url: https://www.certmetrics.com/amazon/public/badge.aspx?i=9&t=c&d=2019-06-14&ci=AWS00823181
+    url: https://www.youracclaim.com/badges/e28f2df8-1ece-4152-8fd7-b68dc6bac579
   - name: Google Cloud Professional Cloud Architect
 #    image: https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11684198
     image: /assets/images/cert/gcp_ca.png
