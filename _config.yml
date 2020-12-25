@@ -49,31 +49,43 @@ certificates:
   - name: Certified Kubernetes Administrator
     image: /assets/images/cert/logo_cka.png
     url: https://www.youracclaim.com/badges/b2af3eb7-a0bf-4dc0-b4c5-279935134032
+
   - name: Certified Kubernetes Application Developer
     image: /assets/images/cert/logo_ckad.png
     url: https://www.youracclaim.com/badges/44bc39a6-71b2-4d4d-baed-a3eebb6a3b11
+
   - name: AWS Certified Solutions Architect - Associate
 #    image: https://www.certmetrics.com/api/ob/image/amazon/c/1
     image: /assets/images/cert/aws_saa.png
     url: https://www.youracclaim.com/badges/b8e69c3e-897d-46a1-88e7-eed6d0caa0e1
+
   - name: AWS Certified Cloud Practitioner
 #    image: https://www.certmetrics.com/api/ob/image/amazon/c/9
     image:  /assets/images/cert/aws_cp.png
     url: https://www.youracclaim.com/badges/e28f2df8-1ece-4152-8fd7-b68dc6bac579
+
+  - name: DataStax Apache Cassandra 3 Developer Associate
+    url: https://certification.mettl.com/datastax/applicant/result/download-certificate?key=w8SWt5PfdyCj9yuj6T2ApA%3D%3D
+    image: /assets/images/cert/datastax_cassandra_dev.png
+
   - name: Google Cloud Professional Cloud Architect
 #    image: https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11684198
     image: /assets/images/cert/gcp_ca.png
     url: https://www.credential.net/1nwrodht
+
   - name: Google Cloud Professional Data Engineer
 #    image: https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11667075
     image: /assets/images/cert/gcp_de.png
     url: https://www.credential.net/ctd7pqmw
+
   - name: Architecting with Google Kubernetes Engine
     image: /assets/images/cert/Y7AZ49H3L64L.png
     url: https://www.coursera.org/account/accomplishments/specialization/Y7AZ49H3L64L
+
   - name: Developing Applications with Google Cloud Platform
     image: /assets/images/cert/BEHZFAJFDN3L.png
     url: https://www.coursera.org/account/accomplishments/specialization/BEHZFAJFDN3L
+
   - name: Machine Learning with TensorFlow on Google Cloud Platform
     image: /assets/images/cert/QZM43XMQUR9H.png
     url: https://www.coursera.org/account/accomplishments/specialization/QZM43XMQUR9H
