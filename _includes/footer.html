@@ -19,8 +19,8 @@
       <ul class="cert">
         {%- for cert in site.certificates -%}
           <li>
-            <a href="{{ cert.url }}" target="_blank" title="{{ cert.title }}">
-              <img src="{{ cert.image }}" alt="{{ cert.title }}">
+            <a href="{{ cert.url }}" target="_blank" title="{{ cert.name }}">
+              <img src="{{ cert.image }}" alt="{{ cert.name }}">
             </a>
           </li>
         {%- endfor -%}
