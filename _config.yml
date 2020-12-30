@@ -68,6 +68,10 @@ certificates:
     url: https://certification.mettl.com/datastax/applicant/result/download-certificate?key=w8SWt5PfdyCj9yuj6T2ApA%3D%3D
     image: /assets/images/cert/datastax_cassandra_dev.png
 
+  - name: DataStax Apache Cassandra 3 Administrator Associate
+    url: https://certification.mettl.com/datastax/applicant/result/download-certificate?key=qrwXYj9S5%2BXks0uZm1I3ww%3D%3D
+    image: /assets/images/cert/datastax_cassandra_admin.png
+
   - name: Google Cloud Professional Cloud Architect
 #    image: https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11684198
     image: /assets/images/cert/gcp_ca.png
