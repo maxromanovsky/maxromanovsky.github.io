@@ -17,8 +17,6 @@ header_pages:
   - index.md
   - blog.md
   - about.md
-disqus:
-  shortname: maxromanovsky
 google_analytics: UA-143359647-1
 
 minima:
