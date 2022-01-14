@@ -2,7 +2,7 @@
 layout: post
 title: "Home pet cluster. Kubernetes on CoreOS. Part 2: Spraying some kubes with Kubespray"
 category: kubernetes
-author: Maksim Ramanouski
+author: Maksym Romanowski
 tags: [coreos, kubernetes, kubespray, nuc, udoo]
 
 ---

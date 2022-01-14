@@ -2,7 +2,7 @@
 layout: post
 title: "Home pet cluster. Kubernetes on CoreOS. Part 3: Ingress"
 category: kubernetes
-author: Maksim Ramanouski
+author: Maksym Romanowski
 tags: [coreos, kubernetes, kubespray, nuc, udoo, metallb, nginx, cert-manager, openwrt, haproxy, oauth2-proxy, helm]
 
 ---
@@ -31,7 +31,7 @@ User request (assuming HTTPS traffic to K8s service using client supporting SNI)
 - Nginx with proper SSL certificates performs SSL termination
 - Nginx performs authentication via OAuth2 Proxy (K8s CoreDNS uses OpenWRT DNS to lookup the IP address, and then request is forwarded (again) via MetalLB and nginx)
 - Service and Pod networking do their magic
-- HTTP traffic finally reaches the pod 
+- HTTP traffic finally reaches the pod
 
 ![10000ft Overview](/assets/images/k8s-coreos-home-baremetal/k8s-ingress.png)
 
@@ -40,7 +40,7 @@ User request (assuming HTTPS traffic to K8s service using client supporting SNI)
 ## HAProxy
 OpenWRT router is configured with [HAProxy 2](http://www.haproxy.org/) listening on port `443` with SNI configuration allowing to proxy certain domain names to Kubernetes, while other to another target.
 
-If Kubernetes (on a single IP) is the only destination, simple port forwarding can be used instead. 
+If Kubernetes (on a single IP) is the only destination, simple port forwarding can be used instead.
 
 Here's snippet of HAProxy config, including web UI and prometheus metrics:
 
@@ -234,7 +234,7 @@ configInline:
     protocol: layer2
     addresses:
     - 192.168.0.3/32
-  
+
   # Used only in internal DNS, for services accessible from LAN only
   - name: internal
     protocol: layer2

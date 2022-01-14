@@ -2,7 +2,7 @@
 layout: post
 title: "Running ElasticSearch on 32-bit Linux machine"
 category: elasticsearch
-author: Maksim Ramanouski
+author: Maksym Romanowski
 tags: [elasticsearch, ELK, 32bit, i586]
 
 ---
@@ -146,4 +146,4 @@ Just remember, in order to upgrade to the new ES version you have to:
 1. Check if [`SystemCallFilter`](https://github.com/elastic/elasticsearch/commits/v7.5.1/server/src/main/java/org/elasticsearch/bootstrap/SystemCallFilter.java) in your particular release (`v7.5.1` in this case) has changed. [`master` branch is already different](https://github.com/elastic/elasticsearch/commits/master/server/src/main/java/org/elasticsearch/bootstrap/SystemCallFilter.java), so it's just a matter of time.
 1. Re-compile `SystemCallFilter.java` if necessary (after applying patch)
 1. Re-package `elasticsearch-*.jar` with the patched `SystemCallFilter.class`
-1. Check if `/usr/share/elasticsearch/lib/jna-*.jar` has changed (maybe version was bumped), and replace it with the proper full version 
+1. Check if `/usr/share/elasticsearch/lib/jna-*.jar` has changed (maybe version was bumped), and replace it with the proper full version

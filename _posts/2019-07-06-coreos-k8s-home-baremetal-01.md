@@ -2,7 +2,7 @@
 layout: post
 title: "Home pet cluster. Kubernetes on CoreOS. Part 1: don't call us cattle!"
 category: kubernetes
-author: Maksim Ramanouski
+author: Maksym Romanowski
 tags: [coreos, kubernetes, kubespray, nuc, udoo]
 
 ---
@@ -30,7 +30,7 @@ I have two x64 mini computers, which are good candidates for Kubernetes nodes. T
 
 That's why I still treat them as pets, not cattle.
 
-![Pets vs cattle](/assets/images/k8s-coreos-home-baremetal/pet-cattle.jpg) 
+![Pets vs cattle](/assets/images/k8s-coreos-home-baremetal/pet-cattle.jpg)
 
 Image from [StackExchange](https://devops.stackexchange.com/questions/653/what-is-the-definition-of-cattle-not-pets)
 
@@ -70,7 +70,7 @@ Here's the process I've followed to install the OS:
     - Password hash
     - SSH pubkeys
     - CoreOS autoupdate strategy
-- I store my `ignition.yaml` in the repo (without password hash and pubkey) as a reference, but CoreOS installer uses another config format, which is a less-readable `json`. Latest [Config Transpiler](https://github.com/coreos/container-linux-config-transpiler/releases) should be downloaded to create the JSON config: `ct < ignition.yaml > ignition.json`. There's even a [validation service](https://coreos.com/validate/) to check that config is well-formed. 
+- I store my `ignition.yaml` in the repo (without password hash and pubkey) as a reference, but CoreOS installer uses another config format, which is a less-readable `json`. Latest [Config Transpiler](https://github.com/coreos/container-linux-config-transpiler/releases) should be downloaded to create the JSON config: `ct < ignition.yaml > ignition.json`. There's even a [validation service](https://coreos.com/validate/) to check that config is well-formed.
 - Resulting config is written to a USB drive (different from the one where bootable ISO is flashed), alongside with the `bin.bz2` image.
 - After computer is booted from the CoreOS ISO run the installation command: `coreos-install -d /dev/target-disk -i /path/to/ignition.json -f /path/to/image.bin.bz2`, where:
     - `target-disk` is the disk where CoreOS should be installed (disk, not a partition). CoreOS will erase the entire disk and create a [new partition table](https://coreos.com/os/docs/latest/sdk-disk-partitions.html).
