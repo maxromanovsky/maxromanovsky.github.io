@@ -17,6 +17,7 @@ docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pag
 
 ## Dependencies
 
+- https://pages.github.com/versions/
 - https://github.com/github/pages-gem
 - https://github.com/jekyll/minima/
 - https://cookieconsent.osano.com/download/
