@@ -45,6 +45,8 @@ plugins:
   - jekyll-gist
   - jemoji
 
+gpg_fingerprint: 0049 AEBF ABDB 6A2A 6BA2 B7D2 BE08 631D 3870 F679
+
 certificates:
   - name: Certified Kubernetes Administrator
     image: /assets/images/cert/logo_cka.png
