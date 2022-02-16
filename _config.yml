@@ -18,7 +18,6 @@ header_pages:
   - index.md
   - blog.md
   - about.md
-google_analytics: UA-143359647-1
 
 minima:
   # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
