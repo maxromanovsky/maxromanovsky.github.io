@@ -22,6 +22,7 @@ docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pag
 - https://github.com/jekyll/minima/
 - https://cookieconsent.osano.com/download/
 - https://fontawesome.com/v4.7.0/icons/
+    - https://www.bootstrapcdn.com/fontawesome/
 
 ## Docs
 - https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages
