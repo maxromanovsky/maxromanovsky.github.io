@@ -2,12 +2,10 @@ theme: minima
 markdown: CommonMarkGhPages
 title: Maksym Romanowski
 author: Maksym Romanowski
-author: Maksym Romanowski
 description: >
   My homepage. Maksym Romanowski aka maxromanovsky.
   Occasional blogging, basic info.
-  Solutions Architect, metal lover, nerd, traveler, casual photographer, binge-watcher, newbie gamer.
-
+  MLOps, DevOps, Solutions Architect, nerd, traveler, binge-watcher, newbie gamer.
 
 show_excerpts: true
 excerpt_separator: <!--more-->
@@ -27,13 +25,9 @@ commonmark:
   options: ["SMART", "FOOTNOTES"]
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
-twitter_username: maxromanovsky
 github_username: maxromanovsky
-facebook_username: max.romanovsky
-instagram_username: maxromanovsky
 linkedin_username: maxromanovsky
 telegram_username: maxromanovsky
-keybase_username: maxromanovsky
 rss: rss
 
 plugins:
@@ -52,15 +46,14 @@ certificates:
   #   # url: https://www.youracclaim.com/badges/b2af3eb7-a0bf-4dc0-b4c5-279935134032
   #   url: https://www.credly.com/badges/b2af3eb7-a0bf-4dc0-b4c5-279935134032
 
-  - name: Certified Kubernetes Security Specialist
-    image: /assets/images/cert/logo_cks.png
-    url: https://www.credly.com/badges/a44b0d28-767d-4bb5-adeb-be718417fa6a
+  # - name: Certified Kubernetes Security Specialist
+  #   image: /assets/images/cert/logo_cks.png
+  #   url: https://www.credly.com/badges/a44b0d28-767d-4bb5-adeb-be718417fa6a
 
   # - name: Certified Kubernetes Application Developer
   #   image: /assets/images/cert/logo_ckad.png
   #   # url: https://www.youracclaim.com/badges/44bc39a6-71b2-4d4d-baed-a3eebb6a3b11
   #   url: https://www.credly.com/badges/44bc39a6-71b2-4d4d-baed-a3eebb6a3b11
-
 #   - name: AWS Certified Solutions Architect - Associate
 # #    image: https://www.certmetrics.com/api/ob/image/amazon/c/1
 #     image: /assets/images/cert/aws_saa.png
@@ -71,13 +64,13 @@ certificates:
 #     image:  /assets/images/cert/aws_cp.png
 #     url: https://www.youracclaim.com/badges/e28f2df8-1ece-4152-8fd7-b68dc6bac579
 
-  # - name: DataStax Apache Cassandra 3 Developer Associate
-  #   url: https://certification.mettl.com/datastax/applicant/result/download-certificate?key=w8SWt5PfdyCj9yuj6T2ApA%3D%3D
-  #   image: /assets/images/cert/datastax_cassandra_dev.png
+# - name: DataStax Apache Cassandra 3 Developer Associate
+#   url: https://certification.mettl.com/datastax/applicant/result/download-certificate?key=w8SWt5PfdyCj9yuj6T2ApA%3D%3D
+#   image: /assets/images/cert/datastax_cassandra_dev.png
 
-  # - name: DataStax Apache Cassandra 3 Administrator Associate
-  #   url: https://certification.mettl.com/datastax/applicant/result/download-certificate?key=qrwXYj9S5%2BXks0uZm1I3ww%3D%3D
-  #   image: /assets/images/cert/datastax_cassandra_admin.png
+# - name: DataStax Apache Cassandra 3 Administrator Associate
+#   url: https://certification.mettl.com/datastax/applicant/result/download-certificate?key=qrwXYj9S5%2BXks0uZm1I3ww%3D%3D
+#   image: /assets/images/cert/datastax_cassandra_admin.png
 
 #   - name: Google Cloud Professional Cloud Architect
 # #    image: https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/11684198
