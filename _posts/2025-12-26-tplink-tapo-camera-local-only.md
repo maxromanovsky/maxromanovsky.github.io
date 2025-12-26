@@ -8,6 +8,8 @@ tags: [tp-link-tapo, camera, tl;dr]
 ## TL;DR
 This snippet shows how to run TP-Link Tapo cameras fully locally, without access to internet.
 
+<!--more-->
+
 ## Environment
 - TP-Link Tapo C110 hw 2.0 fw 1.4.7
 - TP-Link Tapo C225 hw 2.0 fw 1.1.1

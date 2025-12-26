@@ -8,6 +8,8 @@ tags: [unifi, letsencrypt, tl;dr]
 ## TL;DR
 This snippet installs Let's Encrypt TLS certificate, ensures it is renewed, and makes sure that UniFi is resolved to LAN IP when accessed via FQDN in TLS certificate.
 
+<!--more-->
+
 ## Environment
 - UniFi OS 4.4.6
 - UniFi Network 10.0.162
