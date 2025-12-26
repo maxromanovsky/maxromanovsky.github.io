@@ -1,5 +1,7 @@
 theme: minima
-markdown: CommonMarkGhPages
+# disabled on purpose, otherwise docker run fails locally
+# haven't seen any difference on gh pages :)
+# markdown: CommonMarkGhPages
 title: Maksym Romanowski
 author: Maksym Romanowski
 description: >

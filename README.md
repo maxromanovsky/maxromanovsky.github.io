@@ -17,7 +17,6 @@ git clone https://github.com/github/pages-gem.git
 cd pages-gem
 make image
 # in current dir
-# disable markdown: CommonMarkGhPages in _config.yml
 docker run -it --rm -v "$PWD":/src/site -p "4000:4000" gh-pages /bin/bash -c "bundle install --gemfile=/src/site/Gemfile; jekyll serve --watch --force_polling -H 0.0.0.0 -P 4000 --drafts"
 ```
 
