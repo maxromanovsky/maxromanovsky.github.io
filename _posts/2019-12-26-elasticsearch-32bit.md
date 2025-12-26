@@ -4,6 +4,7 @@ title: "Running ElasticSearch on 32-bit Linux machine"
 category: elasticsearch
 author: Maksym Romanowski
 tags: [elasticsearch, ELK, 32bit, i586]
+outdated: true
 
 ---
 I have an old piece of hardware with [Atom D2700](https://ark.intel.com/content/www/us/en/ark/products/59683/intel-atom-processor-d2700-1m-cache-2-13-ghz.html) CPU, which according to ARK is capable of running x64 OS. Vendor, however, never released a BIOS with x64 support, and I was unable to find it on an Internet.
@@ -26,7 +27,7 @@ I've chosen official `deb` OSS distribution w/o JVM over `tar.gz` and commercial
 First things first, we need to prepare our OS:
 
 {% raw %}
-```shell script
+```sh
 # I know, it's bad practice
 sudo -i
 export ES_VERSION=7.5.1
@@ -72,7 +73,7 @@ index 59f8bd5daf7..6a6b360726e 100644
 I am doing it on my macOS, which compiles Java much faster. Save `systemcallfilter-i386.patch` and navigate shell to the same directory (replace `<elasticsearch-host>` with your ES hostname):
 
 {% raw %}
-```shell script
+```sh
 export ES_VERSION=7.5.1
 
 # Prepare build environment
@@ -106,7 +107,7 @@ scp elasticsearch-${ES_VERSION}.jar <elasticsearch-host>:/tmp
 
 Now we can continue (in the same shell with sudo and `ES_VERSION`):
 {% raw %}
-```shell script
+```sh
 # Replacing the ElasticSearch jar with the patched one
 mv /tmp/elasticsearch-${ES_VERSION}.jar /usr/share/elasticsearch/lib/
 

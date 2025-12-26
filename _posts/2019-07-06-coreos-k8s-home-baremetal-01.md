@@ -4,6 +4,7 @@ title: "Home pet cluster. Kubernetes on CoreOS. Part 1: don't call us cattle!"
 category: kubernetes
 author: Maksym Romanowski
 tags: [coreos, kubernetes, kubespray, nuc, udoo]
+outdated: true
 
 ---
 I always wanted to run a small Kubernetes cluster at home.

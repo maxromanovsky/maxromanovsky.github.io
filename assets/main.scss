@@ -4,76 +4,95 @@
 
 @import "minima";
 
-$spacing-unit:     30px !default;
+$spacing-unit: 30px !default;
 $font-font-awesome: FontAwesome;
 
 .footer-col-1 {
-  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
-  width:         calc(60% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+    width: calc(60% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(40% - (#{$spacing-unit} / 2));
-  width:         calc(40% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width: calc(40% - (#{$spacing-unit} / 2));
 }
 
 ul.cert {
-  list-style: none;
+    list-style: none;
 
-  li {
-    display: inline;
+    li {
+        display: inline;
 
-    img {
-      height: 200px;
+        img {
+            height: 200px;
+        }
+
+        a {
+            text-decoration: none;
+        }
     }
-
-    a {
-      text-decoration: none;
-    }
-  }
 }
 
 //Tag styling from https://github.com/codinfox/codinfox-lanyon/blob/dev/_scss/component/_tag.scss
 %post-token {
-  display: inline-block;
-  padding: 0 .5rem;
-  margin-right: .5rem;
-  margin-bottom: .3rem;
-  border-radius: 4px;
-  color: $brand-color;
-  font-family: $base-font-family;
-  font-size: 90%;
-  &:before {
-    font-family: $font-font-awesome;
-    padding-right: .5em;
-  }
-  &:hover {
-    text-decoration: none;
-    color: #fff !important;
-  }
-  &:visited {
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+    border-radius: 4px;
     color: $brand-color;
-  }
+    font-family: $base-font-family;
+    font-size: 90%;
+    &:before {
+        font-family: $font-font-awesome;
+        padding-right: 0.5em;
+    }
+    &:hover {
+        text-decoration: none;
+        color: #fff !important;
+    }
+    &:visited {
+        color: $brand-color;
+    }
 }
 
 .post-tag {
-  @extend %post-token;
-  background: rgba($brand-color, 0.15);
-  &:before {
-    content: "\f02b";
-  }
-  &:hover {
-    background: $brand-color;
-  }
+    @extend %post-token;
+    background: rgba($brand-color, 0.15);
+    &:before {
+        content: "\f02b";
+    }
+    &:hover {
+        background: $brand-color;
+    }
 }
 
 .post-category {
-  @extend %post-token;
-  background: rgba($grey-color-dark, 0.15);
-  &:before {
-    content: "\f03a";
-  }
-  &:hover {
-    background: $grey-color-dark;
-  }
+    @extend %post-token;
+    background: rgba($grey-color-dark, 0.15);
+    &:before {
+        content: "\f03a";
+    }
+    &:hover {
+        background: $grey-color-dark;
+    }
+}
+
+.warning {
+    display: flex;
+    gap: 0.75em;
+    align-items: flex-start;
+    border-left: 4px solid #e67e22;
+    background: #fff4e6;
+    padding: 1em;
+    margin: 1.5em 0;
+    border-radius: 4px;
+}
+
+.warning-icon {
+    @extend %post-token;
+    color: #e67e22;
+    &:before {
+        content: "\f071";
+    }
 }

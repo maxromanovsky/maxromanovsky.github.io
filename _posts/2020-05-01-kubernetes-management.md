@@ -4,6 +4,7 @@ title: "My approach to Kubernetes installation & management on bare metal"
 category: kubernetes
 author: Maksym Romanowski
 tags: [kubernetes, flatcar, coreos, hypriotos, kubespray, k3s, pulumi, helmsman, helm]
+outdated: true
 ---
 
 ## Installation

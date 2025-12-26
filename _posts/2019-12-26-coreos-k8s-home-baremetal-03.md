@@ -4,6 +4,7 @@ title: "Home pet cluster. Kubernetes on CoreOS. Part 3: Ingress"
 category: kubernetes
 author: Maksym Romanowski
 tags: [coreos, kubernetes, kubespray, nuc, udoo, metallb, nginx, cert-manager, openwrt, haproxy, oauth2-proxy, helm]
+outdated: true
 
 ---
 My Kubernetes is up and running, and I've decided to expose certain services to the Internet, while keeping other services inside the home network.

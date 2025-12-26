@@ -4,6 +4,7 @@ title: "Home pet cluster. Kubernetes on CoreOS. Part 2: Spraying some kubes with
 category: kubernetes
 author: Maksym Romanowski
 tags: [coreos, kubernetes, kubespray, nuc, udoo]
+outdated: true
 
 ---
 At this point I have two Linux machines running CoreOS Container Linux.
