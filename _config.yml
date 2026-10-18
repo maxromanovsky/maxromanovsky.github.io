@@ -19,6 +19,9 @@ header_pages:
   - blog.md
   - about.md
 
+include:
+- .well-known
+
 minima:
   # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
   date_format: "%-d %b %Y"
